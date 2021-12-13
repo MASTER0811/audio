@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --light-blue:#dae4ff;
+    --blue:#1a73e8;
+    --black:#202020;
+    --white:#ffffff;
+    --gray:#dfe1e5;
+    --red:#ff0000;
+    --transform-ro: rotate(0deg);
+}
+.darkmode{
+    --light-blue:#202020;
+    --black:#ffffff;
+    --white:#505050;
+    --transform-ro: rotate(360deg);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btnlight{
+    display: none;
+}
+.dark_or_light{
+    position: absolute;
+    right: 8vw;
+    top: 2vh;
+    background: var(--white);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: var(--transform-ro);
+    box-shadow: var(--shadow);
+}
+.dark_or_light i{
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--black);
+}
+.row{
+    display: flex;
+    width: 80%;
+    background: var(--row-bg);
+    border-radius: 15px;
+    height: 73%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
+}
+.col-1{
+    flex-basis: 30%;
+    overflow: hidden;
+}
+.col-2{
+    flex-basis: 70%;
+}
+:root{
+    --row-bg:#ffffff;
+    --row-color:#000000;
+    --bg:#fafafa;
+    --shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --inset-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.darkmode{
+    --bg:#454545;
+    /* col-left-bg */
+    --row-bg:#404040;
+    --row-color:#ffffff;
+    --shadow:rgba(210, 210, 218, 0.103) 0px 7px 29px 0px;
+    --inset-shadow:rgba(117, 117, 151, 0.25) 0px 30px 60px -50px inset,rgba(194, 194, 194, 0.3) 0px 18px 36px -10px inset;
+}
+.col-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+}
+.col-1 h2{
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    font-size: 35px;
+    color: var(--black);
+    letter-spacing: 2.5px;
+}
+.col-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.video-p{
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    position: relative;
+}
+.video-p video{
+    width: 100%;
+    height: 100%;
+}
+.flur{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 5%;
+    left: 0;
+}
+#btnplay{
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--black);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    box-shadow:var(--shadow)
+}
+#btnpause{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    color: var(--blue);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    box-shadow:var(--inset-shadow)
+}
+#btnstop{
+    margin-left: 25px;
+    font-size: 30px;
+    color: var(--blue);
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    box-shadow:var(--shadow)
+}
+#btnstop:active,#btnfullscreen:active{
+    color: var(--gray);
+}
+
+#btnfullscreen{
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 25px;
+    color: var(--blue);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    box-shadow:var(--shadow)
+}
+
+progress{
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.video-progress #curtimetext{
+    position: absolute;
+    left: 85px;
+    bottom: 83px;
+    font-weight: 700;
+    color: var(--black);
+    user-select: none;
+}
+.video-progress #durtimetext{
+    position: absolute;
+    left: 150px;
+    bottom: 83px;
+    font-weight: 700;
+    color: var(--black);
+    user-select: none;
+}
+.video-progress #slide{
+    position: absolute;
+    left: 135px;
+    bottom: 83px;
+    font-weight: 700;
+    color: var(--black);
+    user-select: none;
+}
+#seekslider{
+    display: none;
+}
+
+.icon-list{
+    position: absolute;
+    bottom: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border-radius: 50px;
+}
+.icon-list span{
+    width: 50px;
+    text-align: center;
+    height: 100%;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--black);
+}
+
+#btnupload{
+    width: 70px;
+    height: 70px;
+    border: 0;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#btnupload i{
+    color: var(--blue);
+    font-size: 25px;
+}
+#btnupload:active{
+    box-shadow: var(--inset-shadow);
+}
+
+input[type="file"]{
+    display: none;
+}
