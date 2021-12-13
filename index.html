@@ -1,2 +1,47 @@
-<h1>Hello!</h1>
-<p>Github</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="dark_or_light">
+            <i class="fas fa-moon" id="btndark"></i>
+            <i class="fas fa-sun" id="btnlight"></i>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <!-- <div class="play_pause"></div> -->
+                <h2 id="titlev">Player</h2>
+                <i class="fas fa-play" id="btnplay"></i>
+                <i class="fas fa-pause" id="btnpause"></i>
+                <i class="fas fa-stop" id="btnstop"></i>
+                <i class="fas fa-expand" id="btnfullscreen"></i>
+                <div class="icon-list">
+                    <input type="file" id="fileupload" accept="video/*">
+                    <label for="fileupload" id="btnupload"><i class="fas fa-upload"></i></label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="video-p">
+                    <video src="{video_name}" id="vid"></video>
+                    <div class="flur"></div>
+                </div>
+                <div class="video-progress">
+                    <progress value="0" id="progress"></progress>
+                    <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
+                    <span id="curtimetext">00:00</span><span id="slide"> / </span><span id="durtimetext">00:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
